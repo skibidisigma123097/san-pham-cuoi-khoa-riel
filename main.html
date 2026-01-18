@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .icon {
+        width: 40px;
+        height: 40px;
+        background-image: url("img/Screenshot 2025-03-21 213123.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .topbar {
+        background: white;
+        padding: 10px 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .brand {
+        font-weight: 600;
+    }
+
+    .container {
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns:  auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .pic {
+        width: 100%;
+        height: 650px;
+    }
+
+    .pic2 {
+        width: full;
+        height: 240px;
+    }
+
+    .card-container {
+        border: 2px solid black;
+        display: inline-block;
+        margin: 20px 20px 20px;
+    }
+</style>
+
+<body>
+    <header class="topbar">
+        <div class="d-flex align-items-center gap-2 p-2">
+            <div class="icon"></div>
+            <div class="brand">Gamehub fake</div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-light w-100">
+            <div class="container-fluid">
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Trang chủ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bảng xếp hạng</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Game</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                <img src="https://ui-avatars.com/api/?name=User&background=0D8ABC&color=fff"
+                                    id="userAvatar" class="rounded-circle me-2" width="32" height="32">
+
+                                <span id="usernameDisplay">Tài khoản</span>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="profile.html">👤 Hồ sơ</a></li>
+                                <li><a class="dropdown-item" href="friends.html">👥 Bạn bè</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#" id="logoutBtn"> ➜🚪 Đăng xuất</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <form class="d-flex ms-3" role="search" style="margin-bottom: 20px; margin-top: 10px">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+    <h1 class="text-center">Một vài tựa game bạn có thể thích</h1>
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="pic" src="https://warthunder.com/i/opengraph-wt.jpg" alt="wt">
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="https://store.steampowered.com/app/236390/War_Thunder/" class="btn btn-primary">Tải về</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="pic"
+                    src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1731252354"
+                    alt="terraria">
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="https://store.steampowered.com/app/105600/Terraria/" class="btn btn-primary">Tải về</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="pic"
+                    src="https://static0.srcdn.com/wordpress/wp-content/uploads/2018/12/Subnautica-Review-Art.jpg"
+                    alt="subnautica">
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="https://store.steampowered.com/app/264710/Subnautica/" class="btn btn-primary">Tải về</a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <h1 class="text-center">Một vài tựa game khác</h1>
+    <div class="container">
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img class="pic2 card-img-top"
+                    src="https://preview.redd.it/just-got-the-spark-to-dive-into-wuwa-its-already-version-2-v0-25noepqad4ze1.jpeg?auto=webp&s=cb222559cc03b41a8c33332e0793e9b524667812"
+                    alt="wuwa">
+                <div class="card-body">
+                    <h5 class="card-title">Wuthering Waves</h5>
+                    <a href="https://store.steampowered.com/app/3513350/Wuthering_Waves/" class="btn btn-primary">Tải
+                        về</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img class="pic2 card-img-top"
+                    src="https://upload.wikimedia.org/wikipedia/en/2/2b/ArkSurvivalEvolved.png" alt="ark">
+                <div class="card-body">
+                    <h5 class="card-title">Ark: Survival Evolved</h5>
+                    <a href="https://store.steampowered.com/app/346110/ARK_Survival_Evolved/"
+                        class="btn btn-primary">Tải về</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img class="pic2 card-img-top"
+                    src="https://static.vinahost.vn/wp-content/uploads/2025/11/tiem-pho-cua-anh-hai-8.jpg"
+                    alt="pho anh hai">
+                <div class="card-body">
+                    <h5 class="card-title">Brother Hai's Pho Restaurant</h5>
+                    <a href="https://marisa0704.itch.io/brother-hais-pho-restaurant" class="btn btn-primary">Tải về</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img class="pic2 card-img-top"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSecLJAO3HhOHXjKdg4H0-3P2fkk26_3MECUA&s"
+                    alt="ultrakill">
+                <div class="card-body">
+                    <h5 class="card-title">ULTRAKILL</h5>
+                    <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/" class="btn btn-primary">Tải về</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img class="pic2 card-img-top"
+                    src="data:image/png;base64,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"
+                    alt="deltarune">
+                <div class="card-body">
+                    <h5 class="card-title">Deltarune</h5>
+                    <a href="https://store.steampowered.com/app/1671210/DELTARUNE/" class="btn btn-primary">Tải về</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img class="pic2 card-img-top"
+                    src="data:image/webp;base64,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"
+                    alt="limbuscompany">
+                <div class="card-body">
+                    <h5 class="card-title">Limbus Company</h5>
+                    <a href="https://store.steampowered.com/app/1973530/Limbus_Company/" class="btn btn-primary">Tải
+                        về</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <footer>
+    <div class="container2">
+       
+    </div>
+   </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        const currentUser = localStorage.getItem("CurrentUser"); /*lay ten user dang nhap*/
+
+        if (!currentUser) {
+            window.location.href = "dangnhap1.html"; /*neu dell co thi chuyen ve trang dang nhap*/
+        }
+
+        document.getElementById("usernameDisplay").textContent = currentUser; /*lay ten dang nhap roi hien thi len trang*/
+
+        document.getElementById("userAvatar").src =
+            "https://ui-avatars.com/api/?name=" + encodeURIComponent(currentUser) +
+            "&background=0D8ABC&color=fff"; /*tu dong tao avatar theo ten sai ui avatar, encode de tranh loi*/
+
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            localStorage.removeItem("CurrentUser"); /*neu nhan dang xuat thi se xoa currentuser roi quay ve trang dang nhap*/
+            window.location.href = "dangnhap1.html";
+        });
+    </script>
+</body>
+
+</html>
